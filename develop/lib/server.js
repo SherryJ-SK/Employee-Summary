@@ -1,7 +1,11 @@
 const inquirer = require("inquirer");
-const Manager = require("./Manager");
 const axios = require("axios");
 const fs = require("fs");
+const Employee = require("Employee");
+const Manager = require("Manager");
+const Engineer = require("Engineer");
+const Intern = require("intern");
+
 
 
 
