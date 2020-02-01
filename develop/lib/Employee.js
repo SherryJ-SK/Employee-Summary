@@ -19,8 +19,8 @@ class Employee {
     }
 
     getRole() {
-        //this.role = "Employee";
-        return "Employee";
+        this.role = "Employee";
+        return this.role;
     }
 }
 
