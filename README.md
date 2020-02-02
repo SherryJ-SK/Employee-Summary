@@ -25,8 +25,10 @@ Different type of employee has unique questions:
 
 **Manager**
 * Office Number
+
 **Engineer**
 * GitHub username
+
 **Intern**
 * School
 
