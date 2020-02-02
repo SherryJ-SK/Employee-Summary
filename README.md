@@ -25,15 +25,13 @@ Different type of employee has unique questions:
 
 **Manager**
 * Office Number
-
 **Engineer**
 * GitHub username
-
 **Intern**
 * School
 
 ## HTML sample display
-![image](assets/image/sampel.png)
+![image](assets/image/sample.png)
 
 ## Acknowledgments
 1. Node js
