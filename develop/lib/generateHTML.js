@@ -1,14 +1,14 @@
 // generate manager div append to html
 const fs = require("fs");
 
-function managerDiv(data) {
+function managerDiv(data, manager) {
     const newDiv =
         `<div class="col-md-4 pb-3">
         <div class="card">
             <div class="card-header" id="manager">
                 ${data.name}
                 <br>
-                <i class="fas fa-user-cog"></i>Manager
+                <i class="fas fa-user-cog"></i>${manager[0].role}
             </div>
             <div class="card-body">
                 <ul class="list-group">
@@ -27,14 +27,14 @@ function managerDiv(data) {
 };
 
 // generate engineer div append to html
-function engineerDiv(data) {
+function engineerDiv(data, engineer) {
     const newDiv =
         `<div class="col-md-4 pb-3">
             <div class="card">
                 <div class="card-header" id="engineer">
                     ${data.name}
                     <br>
-                    <i class="fab fa-github-alt"></i>Engineer
+                    <i class="fab fa-github-alt"></i>${engineer[0].role}
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -53,14 +53,14 @@ function engineerDiv(data) {
 };
 
 // generate intern div append to html
-function internDiv(data) {
+function internDiv(data, intern) {
     const newDiv =
         `<div class="col-md-4 pb-3">
             <div class="card">
                 <div class="card-header" id="intern">
                     ${data.name}
                     <br>
-                    <i class="fas fa-book-reader"></i>Intern
+                    <i class="fas fa-book-reader"></i>${intern[0].role}
                 </div>
                 <div class="card-body">
                     <ul class="list-group">

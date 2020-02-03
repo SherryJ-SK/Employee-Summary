@@ -5,11 +5,6 @@ const Intern = require("./Intern");
 const qList = require("./questions");
 const generateHTML = require("./generateHTML");
 
-const manager = [];
-const engineer = [];
-const intern = [];
-
-
 //initial question ask for manager information
 inquirer.prompt(qList.initialQuestion)
     .then(function (data) {
@@ -26,6 +21,7 @@ employee = {
     managerRole: function () {
         inquirer.prompt(qList.managerQuestion)
             .then(function (data) {
+                const manager = [];
                 const newManager = new Manager(
                     data.name,
                     data.id,
@@ -34,13 +30,14 @@ employee = {
                 );
                 manager.push(newManager);
                 // console.log(manager);
-                generateHTML.managerDiv(data);
+                generateHTML.managerDiv(data, manager);
                 moreEmployee();
             })
     },
     engineerRole: function () {
         inquirer.prompt(qList.engineerQuestion)
             .then(function (data) {
+                const engineer = [];
                 const newEngineer = new Engineer(
                     data.name,
                     data.id,
@@ -49,13 +46,14 @@ employee = {
                 );
                 engineer.push(newEngineer);
                 // console.log(engineer);
-                generateHTML.engineerDiv(data)
+                generateHTML.engineerDiv(data, engineer)
                 moreEmployee();
             })
     },
     internRole: function () {
         inquirer.prompt(qList.internQuestion)
             .then(function (data) {
+                const intern = [];
                 const newIntern = new Intern(
                     data.name,
                     data.id,
@@ -64,7 +62,7 @@ employee = {
                 );
                 intern.push(newIntern);
                 // console.log(intern);
-                generateHTML.internDiv(data);
+                generateHTML.internDiv(data, intern);
                 moreEmployee();
             })
     }
