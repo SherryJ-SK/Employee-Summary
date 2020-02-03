@@ -7,10 +7,11 @@ class Intern extends Employee {
         // this.id = id;
         // this.email = email;
         this.school = school;
+        this.role = "Intern";
     }
 
     getRole() {
-        return "Intern";
+        return this.role;
     };
 
     getSchool() {

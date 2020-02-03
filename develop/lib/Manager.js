@@ -7,10 +7,10 @@ class Manager extends Employee {
         //this.id;
         // this.email = email;
         this.officeNumber = officeNumber;
+        this.role = "Manager";
     }
 
     getRole() {
-        this.role = "Manager";
         return this.role;
     };
 
